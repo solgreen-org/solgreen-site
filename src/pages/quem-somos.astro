@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { Team } from "../components/sections/Team";
+import { CTA } from "../components/sections/CTA";
+---
+
+<Layout title="Quem Somos" description="SolGreen Energia: 17 anos de engenharia elétrica aplicados a usinas solares, armazenamento e automação energética.">
+  <PageHeader title="Quem Somos" subtitle="17 anos de engenharia elétrica aplicados à energia do futuro." />
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="text-lg text-neutral-500 leading-relaxed mb-8">
+        A SolGreen nasceu em Panambi, no noroeste do Rio Grande do Sul, com o objetivo de desenvolver soluções em energia para operações que não podem falhar.
+      </p>
+
+      <p class="text-neutral-500 leading-relaxed mb-6">
+        Com quase duas décadas de atuação em engenharia elétrica, nossa equipe de engenheiros e técnicos já projetou e executou sistemas para empresas como Bunge, Kepler Weber, AGCO, Yara, C.Vale e CCGL. Essa experiência em instalações industriais de grande porte nos deu a base técnica para atuar onde poucos conseguem: na interseção entre geração solar, armazenamento de energia e automação.
+      </p>
+
+      <p class="text-neutral-500 leading-relaxed mb-6">
+        Hoje atuamos em três frentes: construção de usinas fotovoltaicas para geradoras e permissionárias de energia, sistemas de armazenamento por bateria de lítio para operações críticas, e automação energética para quem precisa de controle total sobre consumo e segurança.
+      </p>
+
+      <p class="text-neutral-500 leading-relaxed mb-12">
+        Nosso diferencial não é vender equipamento. É dimensionar a solução certa, com engenharia séria, para que sua operação produza mais, gaste menos e nunca pare.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div class="text-center p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+          <p class="text-2xl font-heading font-bold text-neutral-900">17+</p>
+          <p class="text-xs text-neutral-400 mt-1">Anos de mercado</p>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+          <p class="text-2xl font-heading font-bold text-neutral-900">7+ MWp</p>
+          <p class="text-xs text-neutral-400 mt-1">Usinas construídas</p>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+          <p class="text-2xl font-heading font-bold text-neutral-900">R$ 43M+</p>
+          <p class="text-xs text-neutral-400 mt-1">Projetos entregues</p>
+        </div>
+        <div class="text-center p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+          <p class="text-2xl font-heading font-bold text-neutral-900">600+</p>
+          <p class="text-xs text-neutral-400 mt-1">Sistemas instalados</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-6">
+        <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-3">Engenharia elétrica industrial</p>
+        <p class="text-sm text-neutral-500">
+          Para projetos de engenharia elétrica industrial (instalações MT/BT, painéis, automação), a SolGreen atua através da <strong>TN3F Engenharia</strong>, nossa marca especializada em obras de grande porte para indústria e agroindústria.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Team client:visible />
+  <CTA client:visible />
+</Layout>

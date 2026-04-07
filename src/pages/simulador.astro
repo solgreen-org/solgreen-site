@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { RiskSimulator } from "../components/sections/RiskSimulator";
+---
+
+<Layout title="Simulador de Risco Energético" description="Calcule quanto sua operação perde em um apagão e descubra o investimento para se proteger.">
+  <PageHeader
+    title="Simulador de Risco Energético"
+    subtitle="Descubra quanto sua operação perde em um apagão e quanto custa a proteção."
+  />
+  <RiskSimulator client:load />
+</Layout>

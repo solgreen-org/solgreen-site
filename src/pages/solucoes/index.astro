@@ -1,0 +1,15 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { About } from "../../components/sections/About";
+import { CTA } from "../../components/sections/CTA";
+---
+
+<Layout title="Soluções" description="Usinas solares, armazenamento por bateria de lítio e automação energética. Conheça nossas soluções.">
+  <PageHeader
+    title="Nossas Soluções"
+    subtitle="Três pilares de tecnologia para que sua operação tenha a energia certa, na hora certa, sem falhas."
+  />
+  <About client:visible />
+  <CTA client:visible />
+</Layout>

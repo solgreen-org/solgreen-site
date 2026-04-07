@@ -1,0 +1,142 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { ContactForm } from "../../components/sections/ContactForm";
+import { pillars } from "../../lib/data";
+
+export function getStaticPaths() {
+  return pillars.map((p) => ({
+    params: { slug: p.slug },
+    props: { pillar: p },
+  }));
+}
+
+const { pillar } = Astro.props;
+const otherPillars = pillars.filter((p) => p.slug !== pillar.slug);
+
+const contentMap: Record<string, { intro: string; details: string[]; benefits: string[] }> = {
+  "usinas-solares": {
+    intro: "Projetamos e construímos usinas fotovoltaicas de grande porte para permissionárias, geradoras e comercializadoras de energia. EPC completo, da simulação ao comissionamento.",
+    details: [
+      "Nossa equipe já entregou mais de 7 MWp em usinas para a CRELUZ, uma das maiores cooperativas de geração de energia do sul do Brasil. Atuamos desde o estudo de viabilidade e simulação de produção até a construção, conexão à rede e start-up.",
+      "Trabalhamos com usinas de 1 a 5+ MWp, priorizando projetos para permissionárias e geradoras que não enfrentam os gargalos regulatórios da geração distribuída convencional.",
+      "A experiência de 17 anos em engenharia elétrica industrial, incluindo subestações e sistemas de média tensão, nos diferencia de integradores que só conhecem baixa tensão.",
+    ],
+    benefits: [
+      "Projeto e construção EPC completo",
+      "Simulação de produção com PVsyst",
+      "Aprovação e conexão junto à distribuidora",
+      "Comissionamento e start-up",
+      "Engenharia de subestação e média tensão incluída",
+      "Experiência real: +7 MWp entregues para CRELUZ",
+    ],
+  },
+  "armazenamento": {
+    intro: "Sistemas de armazenamento de energia com baterias de lítio (LFP) para backup inteligente, continuidade de operação e integração com solar. Sua operação nunca para.",
+    details: [
+      "A bateria de lítio responde em milissegundos. Não existe gap de energia como nos geradores diesel que levam 10 a 30 segundos para ligar. Para avicultura, câmaras frias e operações críticas, essa diferença pode valer R$ 150 mil em produto salvo.",
+      "Oferecemos duas abordagens: substituição do gerador diesel (para quem não tem) e complemento ao gerador (para quem já tem mas precisa eliminar o gap de transição e ter redundância).",
+      "Os sistemas LFP que trabalhamos têm 10+ anos de garantia, 6.000 a 8.000 ciclos de vida útil e manutenção praticamente zero. O custo por kWh armazenado já está competitivo com gerador diesel quando se considera combustível e manutenção ao longo de 10 anos.",
+    ],
+    benefits: [
+      "Resposta instantânea (milissegundos)",
+      "Substitui ou complementa gerador diesel",
+      "Zero manutenção, sem combustível",
+      "Garantia de 10+ anos",
+      "Integração com solar (carrega durante o dia)",
+      "Monitoramento remoto e alertas",
+    ],
+  },
+  "automacao-energetica": {
+    intro: "Monitoramento de consumo em tempo real, gestão de demanda, controle inteligente de equipamentos e alertas automáticos. Energia sob controle total.",
+    details: [
+      "Muitas operações gastam mais energia do que precisam simplesmente porque não medem, não monitoram e não controlam. Um armazém de grãos com secador pode reduzir 15-30% do consumo com automação de aeração e gestão de horários de operação.",
+      "Nossos sistemas de automação energética integram sensores de temperatura, umidade, consumo e demanda com dashboards acessíveis pelo celular. Você sabe exatamente quanto está gastando, onde e por quê.",
+      "Para granjas, a automação vai além da energia: controle de ventilação, comedouros, iluminação e cortinas, tudo integrado com backup por bateria para que uma queda de energia não signifique perda de produção.",
+    ],
+    benefits: [
+      "Dashboard de consumo em tempo real",
+      "Alertas de falha e consumo anormal",
+      "Automação de ventilação, iluminação e motores",
+      "Gestão de demanda contratada",
+      "Integração com baterias e solar",
+      "Acesso remoto via celular",
+    ],
+  },
+};
+
+const content = contentMap[pillar.slug] || contentMap["usinas-solares"];
+const isUsina = pillar.slug === "usinas-solares";
+---
+
+<Layout title={pillar.title} description={pillar.description}>
+  <section class="relative h-56 md:h-72 overflow-hidden">
+    <img src={pillar.cover} alt={pillar.title} class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-neutral-900/70" />
+    <div class="relative max-w-6xl mx-auto px-6 h-full flex items-end pb-10">
+      <div>
+        <p class="text-xs font-semibold text-green-400 uppercase tracking-widest mb-2">Soluções</p>
+        <h1 class="text-2xl md:text-4xl font-heading font-bold text-white">{pillar.title}</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2">
+          <p class="text-lg text-neutral-500 leading-relaxed mb-8">{content.intro}</p>
+
+          {content.details.map((p) => (
+            <p class="text-neutral-600 leading-relaxed mb-4">{p}</p>
+          ))}
+
+          <div class="mt-10 pt-8 border-t border-neutral-200">
+            <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">O que entregamos</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {content.benefits.map((b) => (
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-green mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-neutral-600">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1">
+          <div class="sticky top-24 rounded-xl border border-neutral-200 p-6">
+            <ContactForm
+              client:visible
+              title="Falar com engenheiro"
+              showConsumption={isUsina}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-neutral-200">
+        <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-6">Outras soluções</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {otherPillars.map((p) => (
+            <a
+              href={`/solucoes/${p.slug}`}
+              class="group flex items-center gap-4 p-4 rounded-xl border border-neutral-200 hover:border-neutral-300 hover:shadow-sm transition-all"
+            >
+              <div class="w-10 h-10 rounded-lg bg-green/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={p.icon} />
+                </svg>
+              </div>
+              <div>
+                <span class="font-medium text-neutral-900 text-sm group-hover:text-green transition-colors">{p.title}</span>
+                <p class="text-xs text-neutral-400 mt-0.5">{p.description.slice(0, 80)}...</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

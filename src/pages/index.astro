@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "../components/sections/Hero";
+import { About } from "../components/sections/About";
+import { Benefits } from "../components/sections/Benefits";
+import { SolutionsGrid } from "../components/sections/SolutionsGrid";
+import { CTA } from "../components/sections/CTA";
+---
+
+<Layout title="Home">
+  <Hero client:load />
+  <About client:visible />
+  <Benefits client:visible />
+  <SolutionsGrid client:visible />
+  <CTA client:visible />
+</Layout>
