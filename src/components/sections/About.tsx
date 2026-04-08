@@ -13,10 +13,10 @@ export function About() {
               O que fazemos
             </p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 leading-tight">
-              Três frentes, um objetivo
+              Gerar, armazenar e controlar
             </h2>
             <p className="text-neutral-400 mt-4 max-w-xl mx-auto">
-              Cada operação tem um gargalo diferente. Identificamos o seu e projetamos o sistema que resolve.
+              Usinas fotovoltaicas de grande porte, backup por bateria de lítio e automação de consumo. Cada pilar resolve um problema diferente.
             </p>
           </div>
         </BlurFade>

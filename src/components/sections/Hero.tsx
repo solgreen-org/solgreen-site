@@ -37,9 +37,10 @@ export function Hero() {
           </h1>
 
           <p className="text-base md:text-lg text-neutral-500 max-w-lg leading-relaxed mb-10" style={fade(200)}>
-            17 anos de engenharia elétrica pesada. Mais de 7 MWp em usinas
-            entregues. Agora aplicamos essa experiência em armazenamento
-            por bateria e automação para quem depende de energia 24h.
+            17 anos projetando subestações e instalações industriais
+            para Bunge, Kepler Weber e AGCO. Mais de 7 MWp em usinas
+            entregues para a CRELUZ. Agora, baterias de lítio e automação
+            para quem depende de energia 24h.
           </p>
 
           <div className="flex flex-wrap items-center gap-3" style={fade(300)}>
