@@ -18,7 +18,7 @@ export function CTA() {
               <div className="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/95 via-50% to-transparent" />
 
               <div className="relative p-10 md:p-14 flex flex-col justify-center h-full max-w-lg">
-                <h2 className="text-2xl md:text-3xl font-heading font-bold leading-tight mb-4" style={{ color: "#ffffff" }}>
+                <h2 className="text-2xl md:text-3xl font-heading font-bold text-white leading-tight mb-4">
                   Sua operação não pode parar.
                   <br />
                   <span className="text-green">Sua energia também não.</span>

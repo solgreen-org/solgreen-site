@@ -25,24 +25,26 @@
   --font-slab: "DM Sans", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  font-family: var(--font-body);
-  color: var(--color-neutral-600);
-  overflow-x: hidden;
-  background: #fff;
-}
+  body {
+    font-family: var(--font-body);
+    color: var(--color-neutral-600);
+    overflow-x: hidden;
+    background: #fff;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
 
-::selection {
-  background: var(--color-green);
-  color: white;
+  ::selection {
+    background: var(--color-green);
+    color: white;
+  }
 }
