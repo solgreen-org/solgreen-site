@@ -1,4 +1,5 @@
-const BASE = import.meta.env.BASE_URL;
+const raw = import.meta.env.BASE_URL;
+const BASE = raw.endsWith("/") ? raw : raw + "/";
 
 export function url(path: string): string {
   if (path.startsWith("http")) return path;

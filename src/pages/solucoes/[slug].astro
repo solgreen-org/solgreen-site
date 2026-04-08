@@ -12,7 +12,8 @@ export function getStaticPaths() {
 
 const { pillar } = Astro.props;
 const otherPillars = pillars.filter((p) => p.slug !== pillar.slug);
-const base = import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
 
 const contentMap: Record<string, { intro: string; details: string[]; benefits: string[] }> = {
   "usinas-solares": {

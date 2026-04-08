@@ -1,7 +1,8 @@
 ---
 import { navLinks } from "../lib/data";
 const currentPath = Astro.url.pathname;
-const base = import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50" id="main-header">
