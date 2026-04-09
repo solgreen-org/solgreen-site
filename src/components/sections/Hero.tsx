@@ -37,8 +37,8 @@ export function Hero() {
           </h1>
 
           <p className="text-base md:text-lg text-neutral-500 max-w-lg leading-relaxed mb-10" style={fade(200)}>
-            17 anos projetando subestações e instalações industriais
-            para Bunge, Kepler Weber e AGCO. Mais de 7 MWp em usinas
+            20 anos projetando subestações e instalações industriais
+            para Bunge, Kepler Weber e AGCO. Mais de 12 MWp em usinas de solo
             entregues para a CRELUZ. Agora, baterias de lítio e automação
             para quem depende de energia 24h.
           </p>
@@ -59,15 +59,15 @@ export function Hero() {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-neutral-200" style={fade(400)}>
           <div>
             <p className="text-xl md:text-2xl font-heading font-bold text-neutral-900">
-              <NumberTicker value={17} suffix="+" delay={0.3} />
+              <NumberTicker value={20} suffix="+" delay={0.3} />
             </p>
             <p className="text-xs text-neutral-400 mt-1">Anos de engenharia elétrica</p>
           </div>
           <div>
             <p className="text-xl md:text-2xl font-heading font-bold text-neutral-900">
-              <NumberTicker value={7} suffix="+ MWp" delay={0.5} />
+              <NumberTicker value={12} suffix="+ MWp" delay={0.5} />
             </p>
-            <p className="text-xs text-neutral-400 mt-1">Em usinas construídas</p>
+            <p className="text-xs text-neutral-400 mt-1">Em usinas de solo</p>
           </div>
           <div>
             <p className="text-xl md:text-2xl font-heading font-bold text-neutral-900">

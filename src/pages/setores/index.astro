@@ -32,11 +32,6 @@ const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
               <h2 class="font-heading font-bold text-neutral-900 text-lg mb-2 group-hover:text-green transition-colors">{s.title}</h2>
               <p class="text-xs text-red-500/80 font-medium mb-2">{s.pain}</p>
               <p class="text-sm text-neutral-400 leading-relaxed mb-4">{s.description}</p>
-              {s.stats.investment && (
-                <p class="text-xs text-neutral-500 mb-3">
-                  Investimento a partir de <span class="font-semibold text-neutral-700">{s.stats.investment}</span>
-                </p>
-              )}
               <span class="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-400 group-hover:text-green transition-colors">
                 Ver soluções
                 <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
