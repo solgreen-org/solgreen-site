@@ -96,8 +96,8 @@ export const sectors = [
     cover: "/img/setor-geradoras.png",
     icon: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z",
     pain: "Precisam expandir geração própria com engenharia confiável.",
-    description: "Projetamos e construímos usinas fotovoltaicas de solo para cooperativas de geração e permissionárias. EPC completo, da simulação com PVsyst ao comissionamento e conexão à rede.",
-    solutions: ["Projeto e construção de usinas de solo", "Simulação de produção com PVsyst", "Conexão e aprovação junto à distribuidora", "Comissionamento e start-up"],
+    description: "Projetamos e construímos usinas fotovoltaicas de solo para cooperativas de geração e permissionárias. EPC completo, da simulação ao comissionamento e conexão à rede.",
+    solutions: ["Projeto e construção de usinas de solo", "Simulação de produção energética", "Conexão e aprovação junto à distribuidora", "Comissionamento e start-up"],
   },
   {
     title: "Comércio e Varejo",
