@@ -125,10 +125,10 @@ export const credentialClients = [
   { name: "C.Vale", logo: "/img/clients/cvale.png" },
   { name: "CCGL", logo: "/img/clients/ccgl.png" },
   { name: "Cotripal", logo: "/img/clients/cotripal.png" },
-  { name: "Yara", logo: "/img/clients/yara.svg" },
   { name: "3 Tentos", logo: "/img/clients/3tentos.svg" },
   { name: "Alibem", logo: "/img/clients/alibem.svg" },
-  { name: "Copercampos", logo: "/img/clients/copercampos.png" },
+  { name: "Sulnorte", logo: "/img/clients/sulnorte.png" },
+  { name: "Estaleiro Rio Maguari", logo: "/img/clients/riomaguari.png" },
 ];
 
 export const solutions = pillars;
