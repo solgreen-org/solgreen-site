@@ -6,7 +6,8 @@ const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
 
 // Load all articles
-const articles = await Astro.glob("../../content/artigos/*.md");
+const allFiles = import.meta.glob("../../content/artigos/*.md", { eager: true }) as Record<string, any>;
+const articles = Object.entries(allFiles).map(([path, mod]) => ({ ...mod, _path: path }));
 const sorted = articles.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 
 // Get unique categories
@@ -41,7 +42,7 @@ const categories = [...new Set(sorted.map((a) => a.frontmatter.category))];
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sorted.map((article) => {
-          const slug = article.file.split("/").pop()?.replace(".md", "");
+          const slug = article._path.split("/").pop()?.replace(".md", "");
           return (
             <a href={`${base}recursos/${slug}`} class="group rounded-xl border border-neutral-200 hover:border-neutral-300 hover:shadow-sm transition-all overflow-hidden">
               {article.frontmatter.image && (
