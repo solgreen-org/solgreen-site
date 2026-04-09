@@ -70,7 +70,7 @@ export const sectors = [
     icon: "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z",
     pain: "20.000 frangos mortos em 2 horas por falta de energia.",
     description: "Energia solar em telhados de galpão para reduzir custos e baterias de lítio com resposta instantânea para proteger a produção contra apagões. Sem gap de energia como no gerador diesel.",
-    solutions: ["Solar fotovoltaico em telhados de galpão", "Backup por bateria com resposta instantânea", "Eliminação do gap de transição do diesel", "Monitoramento remoto de temperatura e umidade"],
+    solutions: ["Solar fotovoltaico em telhados de galpão", "Backup por bateria com resposta instantânea", "Eliminação do gap de transição do diesel"],
   },
   {
     title: "Armazenagem e Agro",
