@@ -120,7 +120,7 @@ export const credentialStats = [
 export const credentialClients = [
   { name: "CRELUZ", logo: "/img/clients/creluz.svg" },
   { name: "Bunge", logo: "/img/clients/bunge.svg" },
-  { name: "Kepler Weber", logo: "/img/clients/keplerweber.png" },
+  { name: "Kepler Weber", logo: "/img/clients/keplerweber.svg" },
   { name: "AGCO", logo: "/img/clients/agco.png" },
   { name: "C.Vale", logo: "/img/clients/cvale.png" },
   { name: "CCGL", logo: "/img/clients/ccgl.png" },
