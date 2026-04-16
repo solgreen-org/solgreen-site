@@ -130,6 +130,13 @@ export const cases = [
       "2 transformadores WEG de 1.750 kVA",
     ],
     challenge: "Primeira usina 100% SolGreen, desde o orçamento até a entrega. Primeiro projeto construído para a CRELUZ.",
+    scope: "EPC completo incluindo projeto e construção da subestação em alvenaria com medição em média tensão 23,1 kV, cabine de proteção com disjuntor a vácuo, ramais subterrâneos de média tensão, instalação de 5.632 módulos com estrutura de fixação em solo, interligação dos 30 inversores de string, comissionamento e conexão à rede.",
+    highlights: [
+      "Subestação com 6 cubículos (medição, proteção, derivações e transformação)",
+      "Disjuntor tripolar a vácuo 25 kV com relé de proteção parametrizado",
+      "Malha de aterramento com cabo de cobre nu 50 mm²",
+      "Ramais subterrâneos de média tensão com dutos corrugados",
+    ],
   },
   {
     title: "Sol da Cidade",
@@ -146,6 +153,13 @@ export const cases = [
       "1 transformador WEG de 2.500 kVA",
     ],
     challenge: "Terreno com grande volume de rocha, exigindo perfuração extensiva. Execução mais demorada e complexa que o convencional.",
+    scope: "EPC completo com projeto elétrico, construção civil, montagem mecânica dos módulos, instalação dos inversores e transformador, infraestrutura de média tensão e comissionamento. Terreno rochoso exigiu adaptação da estratégia de cravação de estacas, com perfuração em rocha ao longo de grande parte da área da usina.",
+    highlights: [
+      "Perfuração em rocha para cravação de estacas metálicas",
+      "Transformador WEG de 2.500 kVA",
+      "9 inversores de 250 kW (Huawei) com monitoramento remoto",
+      "Módulos de alta potência 635 Wp (Astronergy)",
+    ],
   },
   {
     title: "Coxilha das Grápias",
@@ -162,6 +176,13 @@ export const cases = [
       "6 transformadores ITR de 1.000 kVA",
     ],
     challenge: "Usina executada em 4 meses, prazo extremamente curto para aproveitar regra regulatória anterior mais vantajosa.",
+    scope: "EPC completo com prazo agressivo de 4 meses. Projeto, aquisição de materiais, construção civil, montagem de 10.800 módulos, instalação de 18 inversores e 6 transformadores, infraestrutura de média tensão e comissionamento. Prazo definido pela necessidade de protocolar a usina antes da mudança regulatória da Lei 14.300/2022, que alterou as condições de compensação de energia.",
+    highlights: [
+      "10.800 módulos instalados em 4 meses",
+      "6 transformadores ITR de 1.000 kVA em paralelo",
+      "Prazo definido por janela regulatória (Lei 14.300)",
+      "Maior usina do portfólio: 6,318 MWp",
+    ],
   },
   {
     title: "São Francisco do Guaporé",
@@ -179,6 +200,13 @@ export const cases = [
       "Tracker (seguidor solar) STI Norland",
     ],
     challenge: "Usina com tracker em local remoto, próximo à fronteira com a Bolívia. Logística complexa e execução durante a pandemia.",
+    scope: "EPC completo de usina com sistema tracker (seguidor solar) STI Norland, tecnologia que acompanha o movimento do sol e aumenta a geração em até 25%. Localizada em região remota de Rondônia, o projeto exigiu planejamento logístico rigoroso para transporte de equipamentos e deslocamento de equipe. A execução coincidiu com o período da pandemia de COVID-19, adicionando complexidade operacional ao projeto.",
+    highlights: [
+      "Tracker STI Norland (seguidor solar monoaxial)",
+      "Até 25% mais geração que estrutura fixa",
+      "Logística complexa: região de fronteira com a Bolívia",
+      "Execução durante a pandemia de COVID-19",
+    ],
   },
 ];
 

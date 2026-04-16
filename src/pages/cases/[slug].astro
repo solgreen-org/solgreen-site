@@ -45,6 +45,29 @@ const otherCases = cases.filter((c) => c.slug !== caseData.slug);
             <p class="text-lg text-neutral-600 leading-relaxed">{caseData.challenge}</p>
           </div>
 
+          {caseData.scope && (
+            <div class="mb-10">
+              <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Escopo do projeto</p>
+              <p class="text-neutral-600 leading-relaxed">{caseData.scope}</p>
+            </div>
+          )}
+
+          {caseData.highlights && caseData.highlights.length > 0 && (
+            <div class="mb-10">
+              <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Destaques</p>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {caseData.highlights.map((h: string) => (
+                  <li class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-green mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-sm text-neutral-600">{h}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {caseData.photos.length > 0 && (
             <div class="mb-10">
               <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Galeria</p>
