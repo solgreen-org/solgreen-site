@@ -58,11 +58,11 @@ Além disso, o gerador diesel exige manutenção regular (troca de óleo, filtro
 
 ## Baterias de lítio: a alternativa de resposta instantânea
 
-As baterias de lítio do tipo LFP (fosfato de ferro-lítio) respondem em **milissegundos**. Não existe gap de energia. Quando a rede cai, o sistema assume a carga instantaneamente, sem que os equipamentos cheguem a desligar.
+As baterias de lítio respondem em **milissegundos**. Quando a rede cai, o sistema assume a carga instantaneamente, sem que os equipamentos cheguem a desligar.
 
 Essa diferença de tempo de resposta é o que separa uma interrupção sem consequências de um prejuízo de seis dígitos.
 
-As baterias LFP têm vida útil superior a 10 anos, suportam milhares de ciclos de carga e descarga, não precisam de combustível e praticamente não exigem manutenção. Quando combinadas com painéis solares, carregam durante o dia usando energia que a empresa já está gerando.
+As baterias de lítio têm vida útil superior a 10 anos, suportam milhares de ciclos de carga e descarga, não precisam de combustível e praticamente não exigem manutenção. Quando combinadas com painéis solares, carregam durante o dia usando energia que a empresa já está gerando.
 
 ## Como avaliar se o investimento faz sentido
 

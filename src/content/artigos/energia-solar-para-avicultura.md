@@ -43,11 +43,11 @@ No caso de Santa Helena, onde 40 mil frangos morreram, o gerador falhou logo ap�
 
 ## Bateria de lítio como primeira linha de defesa
 
-A bateria de lítio LFP responde em milissegundos. Quando a energia da rede cai, o sistema assume a carga dos equipamentos críticos instantaneamente. A ventilação não chega a parar. Os comedouros continuam operando. O produtor muitas vezes nem percebe que houve uma queda na rede.
+A bateria de lítio responde em milissegundos. Quando a energia da rede cai, o sistema assume a carga dos equipamentos críticos instantaneamente. A ventilação não chega a parar. Os comedouros continuam operando. O produtor muitas vezes nem percebe que houve uma queda na rede.
 
 Para uma granja, essa diferença entre milissegundos e 30 segundos pode valer R$ 100 mil ou mais em um único evento.
 
-As baterias LFP têm vida útil superior a 10 anos, não precisam de combustível, não emitem ruído e não exigem manutenção de rotina. São uma camada de proteção silenciosa que funciona automaticamente.
+As baterias de lítio têm vida útil superior a 10 anos, não precisam de combustível, não emitem ruído e não exigem manutenção de rotina. São uma camada de proteção silenciosa que funciona automaticamente.
 
 ## A combinação que faz sentido
 
@@ -55,7 +55,7 @@ A configuração mais eficiente para uma granja combina três elementos:
 
 **Painéis solares no telhado** geram energia durante o dia, reduzindo a conta de luz de forma permanente. O retorno do investimento depende da tarifa local e do consumo, mas em regiões com boa irradiação e tarifas altas, o payback pode ser inferior a 4 anos.
 
-**Bateria LFP** funciona como primeira linha de defesa. Carrega durante o dia (com solar ou rede) e assume instantaneamente quando a energia cai. Cobre interrupções de minutos a horas, dependendo da capacidade instalada.
+**Bateria de lítio** funciona como primeira linha de defesa. Carrega durante o dia (com solar ou rede) e assume instantaneamente quando a energia cai. Cobre interrupções de minutos a horas, dependendo da capacidade instalada.
 
 **Gerador diesel** (se já existir) entra como segunda camada para apagões prolongados. A bateria elimina o gap de partida e dá tempo para o gerador estabilizar sem risco para as aves.
 

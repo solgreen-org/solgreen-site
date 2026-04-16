@@ -177,12 +177,12 @@ export function RiskSimulator() {
 
               <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-6 mb-6">
                 <h3 className="font-heading font-semibold text-neutral-900 text-sm mb-3">
-                  {hasGenerator ? "Recomendação: Bateria + Gerador existente" : "Recomendação: Sistema de bateria LFP"}
+                  {hasGenerator ? "Recomendação: Bateria + Gerador existente" : "Recomendação: Sistema de bateria de lítio"}
                 </h3>
                 <p className="text-sm text-neutral-500 mb-3">
                   {hasGenerator
                     ? `Um sistema de ${systemKwh} kWh na frente do seu gerador elimina o gap de transição (10-30 segundos) e serve como backup se o gerador falhar. Investimento estimado: ${formatCurrency(cost.min)} a ${formatCurrency(cost.max)}.`
-                    : `Um sistema de ${systemKwh} kWh com bateria LFP e inversor híbrido substitui o gerador diesel com resposta instantânea, zero manutenção e 10+ anos de vida útil. Investimento estimado: ${formatCurrency(cost.min)} a ${formatCurrency(cost.max)}.`
+                    : `Um sistema de ${systemKwh} kWh com bateria de lítio e inversor híbrido substitui o gerador diesel com resposta instantânea, zero manutenção e 10+ anos de vida útil. Investimento estimado: ${formatCurrency(cost.min)} a ${formatCurrency(cost.max)}.`
                   }
                 </p>
                 <p className="text-sm text-neutral-700 font-medium">
