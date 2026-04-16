@@ -34,7 +34,7 @@ export function NumberTicker({
           observer.disconnect();
         }
       },
-      { rootMargin: "-100px" }
+      { threshold: 0.1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
