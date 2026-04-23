@@ -2,7 +2,7 @@ export const contact = {
   phone: "(55) 3196 0352",
   phoneLink: "tel:05531960352",
   whatsapp: "(55) 9 9658 8499",
-  whatsappLink: "https://wa.me/555596588499",
+  whatsappLink: "https://wa.me/5555996588499?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20SolGreen%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.",
   email: "contato@solgreen.com.br",
   address: "Av. dos Imigrantes, 1351",
   neighborhood: "Bairro Distrito Industrial",
