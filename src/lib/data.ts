@@ -185,12 +185,12 @@ export const cases = [
     ],
   },
   {
-    title: "Rovema - São Francisco do Guaporé",
+    title: "São Francisco do Guaporé",
     slug: "sao-francisco-do-guapore",
     client: "Rovema (via L8)",
     location: "São Francisco do Guaporé / RO",
     modality: "Geração Distribuída",
-    power: "2,052 MWp",
+    power: "6,318 MWp",
     cover: "/img/obras/sao-francisco-do-guapore-1.jpg",
     photos: [
       "/img/obras/sao-francisco-do-guapore-1.jpg",
