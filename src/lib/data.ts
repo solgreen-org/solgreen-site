@@ -132,9 +132,9 @@ export const cases = [
     challenge: "Primeira usina 100% SolGreen, desde o orçamento até a entrega. Primeiro projeto construído para a CRELUZ.",
     scope: "EPC completo incluindo projeto e construção da subestação em alvenaria com medição em média tensão 23,1 kV, cabine de proteção com disjuntor a vácuo, ramais subterrâneos de média tensão, instalação de 5.632 módulos com estrutura de fixação em solo, interligação dos 30 inversores de string, comissionamento e conexão à rede.",
     highlights: [
-      "Subestação com 6 cubículos (medição, proteção, derivações e transformação)",
+      "Subestação com 5 cubículos (medição, proteção, derivações)",
       "Disjuntor tripolar a vácuo 25 kV com relé de proteção parametrizado",
-      "Malha de aterramento com cabo de cobre nu 50 mm²",
+      "Malha de aterramento",
       "Ramais subterrâneos de média tensão com dutos corrugados",
     ],
   },
@@ -185,9 +185,9 @@ export const cases = [
     ],
   },
   {
-    title: "São Francisco do Guaporé",
+    title: "Rovema - São Francisco do Guaporé",
     slug: "sao-francisco-do-guapore",
-    client: "L8",
+    client: "Rovema (via L8)",
     location: "São Francisco do Guaporé / RO",
     modality: "Geração Distribuída",
     power: "2,052 MWp",
