@@ -9,7 +9,7 @@ import node from '@astrojs/node';
 // https://astro.build/config
 export default defineConfig({
   site: process.env.SITE_URL || 'https://solgreen.com.br',
-  base: process.env.BASE_PATH || '/solgreen-site',
+  base: process.env.BASE_PATH || '/',
   integrations: [react(), sitemap()],
   output: 'server',
   adapter: node({ mode: 'standalone' }),
