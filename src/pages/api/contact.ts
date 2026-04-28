@@ -35,6 +35,7 @@ export const POST: APIRoute = async ({ request }) => {
         user: smtpUser,
         pass: smtpPass,
       },
+      family: 4,
     });
 
     const htmlBody = `
