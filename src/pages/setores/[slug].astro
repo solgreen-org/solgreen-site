@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import { ContactForm } from "../../components/sections/ContactForm";
 import { sectors } from "../../lib/data";
 
+export const prerender = true;
+
 export function getStaticPaths() {
   return sectors.map((s) => ({
     params: { slug: s.slug },
