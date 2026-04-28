@@ -1,11 +1,9 @@
 import type { APIRoute } from "astro";
-import nodemailer from "nodemailer";
 
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
 
-    // Validação básica
     if (!data.nome || !data.email || !data.telefone || !data.mensagem) {
       return new Response(
         JSON.stringify({ success: false, message: "Preencha todos os campos obrigatórios." }),
@@ -13,30 +11,16 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const smtpHost = import.meta.env.SMTP_HOST || process.env.SMTP_HOST;
-    const smtpPort = Number(import.meta.env.SMTP_PORT || process.env.SMTP_PORT || "587");
-    const smtpUser = import.meta.env.SMTP_USER || process.env.SMTP_USER;
-    const smtpPass = import.meta.env.SMTP_PASS || process.env.SMTP_PASS;
-    const smtpFrom = import.meta.env.SMTP_FROM || process.env.SMTP_FROM || "noreply@solgreen.com.br";
-    const smtpTo = import.meta.env.SMTP_TO || process.env.SMTP_TO || "contato@solgreen.com.br";
+    const apiKey = import.meta.env.RESEND_API_KEY || process.env.RESEND_API_KEY;
+    const mailFrom = import.meta.env.MAIL_FROM || process.env.MAIL_FROM || "SolGreen Site <onboarding@resend.dev>";
+    const mailTo = import.meta.env.MAIL_TO || process.env.MAIL_TO || "andre@aex.partners";
 
-    if (!smtpHost || !smtpUser || !smtpPass) {
+    if (!apiKey) {
       return new Response(
         JSON.stringify({ success: false, message: "Serviço de e-mail não configurado." }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
-
-    const transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: smtpPort,
-      secure: smtpPort === 465,
-      auth: {
-        user: smtpUser,
-        pass: smtpPass,
-      },
-      family: 4,
-    });
 
     const htmlBody = `
       <h2>Novo contato pelo site SolGreen</h2>
@@ -53,14 +37,32 @@ export const POST: APIRoute = async ({ request }) => {
       </table>
     `;
 
-    await transporter.sendMail({
-      from: `"Site SolGreen" <${smtpFrom}>`,
-      to: smtpTo,
-      replyTo: String(data.email),
-      subject: "Novo contato pelo site SolGreen",
-      text: `Nome: ${data.nome}\nE-mail: ${data.email}\nTelefone: ${data.telefone}\nEmpresa: ${data.empresa || "—"}\nEstado: ${data.estado || "—"}\nCidade: ${data.cidade || "—"}\nMensagem: ${data.mensagem}`,
-      html: htmlBody,
+    const textBody = `Nome: ${data.nome}\nE-mail: ${data.email}\nTelefone: ${data.telefone}\nEmpresa: ${data.empresa || "—"}\nEstado: ${data.estado || "—"}\nCidade: ${data.cidade || "—"}\nMensagem: ${data.mensagem}`;
+
+    const resp = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: mailFrom,
+        to: [mailTo],
+        reply_to: String(data.email),
+        subject: "Novo contato pelo site SolGreen",
+        html: htmlBody,
+        text: textBody,
+      }),
     });
+
+    if (!resp.ok) {
+      const errBody = await resp.text();
+      console.error("Resend API error:", resp.status, errBody);
+      return new Response(
+        JSON.stringify({ success: false, message: "Erro interno ao enviar mensagem." }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
     return new Response(
       JSON.stringify({ success: true, message: "Mensagem enviada com sucesso!" }),
