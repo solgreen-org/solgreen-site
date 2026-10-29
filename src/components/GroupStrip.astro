@@ -1,0 +1,27 @@
+---
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
+---
+
+<section class="pb-4">
+  <div class="max-w-6xl mx-auto px-6">
+    <a
+      href="https://tn3f.com.br"
+      target="_blank"
+      rel="noopener"
+      class="group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 rounded-xl border border-neutral-200 bg-neutral-50 px-6 py-5 hover:border-neutral-300 hover:bg-white transition-all"
+    >
+      <img src={`${base}img/logo-tn3f.svg`} alt="TN3F Engenharia" class="h-6 w-auto self-start sm:self-center" />
+      <p class="flex-1 text-sm text-neutral-500 leading-relaxed">
+        A SolGreen faz parte do mesmo grupo da <span class="font-medium text-neutral-900">TN3F Engenharia</span>:
+        painéis elétricos, subestações, instalações MT/BT e automação industrial.
+      </p>
+      <span class="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-900 group-hover:text-green transition-colors whitespace-nowrap">
+        Conheça a TN3F
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>

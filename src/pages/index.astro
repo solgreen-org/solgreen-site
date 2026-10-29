@@ -5,10 +5,12 @@ import { About } from "../components/sections/About";
 import { Benefits } from "../components/sections/Benefits";
 import { SolutionsGrid } from "../components/sections/SolutionsGrid";
 import { CTA } from "../components/sections/CTA";
+import GroupStrip from "../components/GroupStrip.astro";
 ---
 
 <Layout title="Home">
   <Hero client:load />
+  <GroupStrip />
   <About client:visible />
   <Benefits client:visible />
   <SolutionsGrid client:visible />
